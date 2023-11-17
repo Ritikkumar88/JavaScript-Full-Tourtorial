@@ -18,3 +18,51 @@ if (true) {
 console.log("outer : " , a)
 // console.log(b)
 console.log(c)
+
+
+// +++++++++++ Nested scope +++++++++++++++++++++++++++++
+
+function one(){
+    const username = "Ritik"
+
+    function two(){
+        const website = "youtube"
+        console.log(username);
+    }
+
+    // console.log(website);
+    two()
+}
+
+one()
+
+
+if(true){
+    const user = "shroff"
+    if(user === "shroff"){
+        const website = "youtube"
+        console.log(user + website)
+    }
+    // console.log(website);
+}
+
+// console.log(user);
+
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+
+
+// ++++++++++++++  Intrasting concept +++++++++++++++++++
+
+console.log(addOne(5))  //this function can be called before initialization there will be no errors
+function addOne (num){
+    return num+1
+}
+
+
+
+
+// function in expressions
+addtwo(5)   // this function cannot be called before initialization as there , this fn is alredy assign to a variable and variable cannot be access before initialization
+const addtwo = function(num){
+    return num+2
+}
