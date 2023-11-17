@@ -64,3 +64,42 @@ console.log(tinderUser)
 console.log(Object.keys(tinderUser));
 console.log(typeof Object.keys(tinderUser));
 console.log(Object.values(tinderUser));
+
+
+// ++++++++++++++++++ de structuring in objects +++++++++++++
+const course = {
+    courseName : "Js in hindi",
+    Price : 999,
+    indtructor : "hitesh sir"
+}
+
+// const {indtructor} = course;  // syntet for de structure object 's key value pair
+// console.log(indtructor);
+
+// we can also change the nave of our key;
+const {indtructor : teacher} = course;  // syntet for de structure object 's key value pair
+console.log(teacher);
+
+// +++++++++++++++++ jason +++++++++
+
+// {
+//     "name" : "ritik",
+//     "coursename" : "js in hindi",
+//     "price" : "free"
+// }
+
+
+// note : its not mendatory , that api;s are always in the form of objects
+// sometimes it is in the form of arrays also;
+
+[
+    {},
+    {},
+    {},
+    {},
+    {}
+]
+
+
+
+
