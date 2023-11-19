@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom lec-4</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="langusge">
+        <li>Javascript</li>
+
+    </ul>
+    
+</body>
+<script>
+
+// meth-1    // 
+    function addLang(langName) {
+        const li = document.createElement("li");
+        li.innerHTML = `${langName}`
+        document.querySelector('.langusge').appendChild(li)
+    }
+
+    addLang("python")
+    addLang("typeScript")
+
+
+// meth-2 ; optimized
+
+    function addOptilang(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.langusge').appendChild(li)
+    }
+
+    addOptilang("golang")
+
+    // edit val***
+    const secLang = document.querySelector("li:nth-child(2)")
+    // secLang.innerHTML = "Mojo"
+
+    // const newLi = document.createElement('li')
+    // newLi.textContent = "abcd"
+    // secLang.replaceWith(newLi)
+
+
+    // tbc  continue....
+
+</script>
+</html>
