@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event part-3</h1>
+    <button id="stop">Stop</button>
+    <button id="start">start</button>
+
+
+    <!-- script -->
+    <script>
+// Set Interval ***************
+   
+//    const sayDate = () => {
+//     document.write("Ritik : " , Date.now())
+//    }
+// const intervalId = setInterval(sayDate , 1000)
+
+// clearInterval**************************************************
+// clearInterval(intervalId)
+
+
+const Name = () => {
+    document.write("Ritik : ")
+}
+
+
+document.querySelector("#start").addEventListener('click' , function(){
+    // setInterval(Name , 2000)
+    console.log("hh")
+})
+
+document.querySelector("#stop").addEventListener('click' , function(){
+    clearInterval(interval1)
+})
+
+
+
+        
+
+    </script>
+</body>
+</html>
