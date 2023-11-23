@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    
+<div id="card" style="background-color: aliceblue; height: 250px; width: 250px; padding: 8px;">
+    <div id="pic" style="background-color: brown;
+    height: 100px; width: 100px; padding: 8px; margin: 8px;">
+    </div>
+    <div id="followers" style="height: 50px; width: 50px; background-color: aqua; color: black; padding: 8px; margin: 8px;">
+
+    </div>
+</div>
+
+    <!-- script -->
+<!-- ++++++++++++++++++++++++++++ API ++++++++++++++++++++++++++++ -->
+<!-- ++++++++++++++++++++++++++++ API ++++++++++++++++++++++++++++ -->
+<!-- ++++++++++++++++++++++++++++ API ++++++++++++++++++++++++++++ -->
+    
+    <script>
+        const RequestURL = 'https://api.github.com/users/hiteshchoudhary'
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET' , RequestURL)
+
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState);
+
+            if (xhr.readyState === 4) {
+                // so here we convert this string into jason
+                data = JSON.parse(this.responseText)
+                console.log(typeof data)
+                console.log( data)
+
+                // note :: most of the time the response we recive from api is in strong not in aboject , so we cant access it by (.) oprator
+                console.log(data.followers)
+            }
+        }
+        xhr.send()
+    </script>
+</body>
+</html>
